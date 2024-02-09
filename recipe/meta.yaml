@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shinipsum_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shinipsum/shinipsum_{{ version }}.tar.gz
-  sha256: f690000b73021134e7b88ba699b22e696df68a5ad7210d3aa20bbc0a130a2435
+  sha256: 444f108e17869af30e265a5cdb66d91b0448f75e5b1f4a4ee82790e2139edad0
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -49,8 +49,7 @@ test:
 about:
   home: https://github.com/Thinkr-open/shinipsum
   license: MIT
-  summary: Prototype your 'shiny' apps quickly with these Lorem-Ipsum helper functions. Generate
-    random elements for 'shiny' outputs that can be used as placeholder in your application.
+  summary: Prototype your 'shiny' apps quickly with these Lorem-Ipsum helper functions. Generate random elements for 'shiny' outputs that can be used as placeholder in your application.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
